@@ -24,13 +24,13 @@ Licensed under the [GNU Lesser General Public License, Version 3.0](http://www.g
 You can then run the following command:
 
 ```
-docker run -e SONAR_HOST_URL=http://foo.acme:9000 --user="$(id -u):$(id -g)" -it -v "/path/to/project:/usr/src" sonarsource/sonar-scanner-cli
+docker run -e SONAR_HOST_URL=http://foo.acme:9000 -e SONAR_PROJECT_KEY=AWESOME --user="$(id -u):$(id -g)" -it -v "/path/to/project:/usr/src" sonarsource/sonar-scanner-cli
 ```
 
 To analysis the project in the current directory:
 
 ```
-docker run -e SONAR_HOST_URL=http://foo.acme:9000 --user="$(id -u):$(id -g)" -it -v "$PWD:/usr/src" sonarsource/sonar-scanner-cli
+docker run -e SONAR_HOST_URL=http://foo.acme:9000 -e SONAR_PROJECT_KEY=AWESOME --user="$(id -u):$(id -g)" -it -v "$PWD:/usr/src" sonarsource/sonar-scanner-cli
 ```
 
 ### Write permissions
